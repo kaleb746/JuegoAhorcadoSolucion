@@ -14,5 +14,6 @@ namespace ServidorAhorcadoService.DTO
         public string Descripcion { get; set; }   // Descripción en el idioma (ej. "Domestic feline", "Felino doméstico")
         
 
+
     }
 }
