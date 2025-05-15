@@ -20,7 +20,7 @@ namespace ServidorAhorcadoService {
             [OperationContract(IsOneWay = true)]
             void NotificarFinPartida(string resultado, string palabra);
         //pruebacommit1
-      
+      //pruebacommit2
     }
 }
 
