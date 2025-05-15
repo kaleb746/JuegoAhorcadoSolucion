@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ServiceModel;
-using ServidorAhorcadoLibrary;
+using ServidorAhorcadoService;
 
-namespace ServidorAhorcadoLibrary
+namespace ServidorAhorcadoService
 {
     [ServiceContract]
     public interface IAhorcadoCallback

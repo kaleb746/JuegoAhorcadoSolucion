@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Runtime.Remoting.Contexts;
 
 
-namespace ServidorAhorcadoLibrary.Model
+namespace ServidorAhorcadoService.Model
 {
     public class AhorcadoContext : DbContext
     {

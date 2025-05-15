@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ServiceModel;
 using System.Windows;
 using System.Windows.Controls;
-using ServidorAhorcadoLibrary.DTO;
-using ServidorAhorcadoLibrary;
-using PartidaEstadoDTO = ServidorAhorcadoLibrary.DTO.PartidaEstadoDTO;
+using ServidorAhorcadoService.DTO;
+using ServidorAhorcadoService;
+using PartidaEstadoDTO = ServidorAhorcadoService.DTO.PartidaEstadoDTO;
 
 
 
@@ -14,7 +14,7 @@ namespace ClienteAhorcadoApp
     public partial class MainWindow : Window, IAhorcadoCallback
     {
         IAhorcadoService proxy;
-        ServidorAhorcadoLibrary.DTO.UsuarioDTO usuarioActual;
+        ServidorAhorcadoService.DTO.UsuarioDTO usuarioActual;
         int idPartidaActual;
 
         public MainWindow()

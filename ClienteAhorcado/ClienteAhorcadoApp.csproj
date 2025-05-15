@@ -62,6 +62,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JuegoAhorcadoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JuegoAhorcadoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -81,6 +86,17 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="JuegoAhorcadoDataSet.xsc">
+      <DependentUpon>JuegoAhorcadoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="JuegoAhorcadoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JuegoAhorcadoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JuegoAhorcadoDataSet.xss">
+      <DependentUpon>JuegoAhorcadoDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,10 +109,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ServidorAhorcadoLibrary\ServidorAhorcadoLibrary.csproj">
-      <Project>{c5386373-00e1-4f37-bf10-893f887f0330}</Project>
-      <Name>ServidorAhorcadoLibrary</Name>
-    </ProjectReference>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

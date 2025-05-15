@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
 using AhorcadoServidor.Model;
-using ServidorAhorcadoLibrary;
-using ServidorAhorcadoLibrary.DTO;
-using ServidorAhorcadoLibrary.Model;
+using ServidorAhorcadoService;
+using ServidorAhorcadoService.DTO;
+using ServidorAhorcadoService.Model;
 
-namespace ServidorAhorcadoLibrary
+namespace ServidorAhorcadoService
 {
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     public class AhorcadoService : IAhorcadoService
