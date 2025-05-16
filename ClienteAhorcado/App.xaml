@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:ClienteAhorcado"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ClienteAhorcado;component/Recursos/Estilos/Animaciones.xaml" />
+                <ResourceDictionary Source="/ClienteAhorcado;component/Recursos/Estilos/ElementosUI.xaml" />
+                <ResourceDictionary Source="/ClienteAhorcado;component/Recursos/Estilos/EstilosTextBox.xaml" />
+                <ResourceDictionary Source="/ClienteAhorcado;component/Recursos/Estilos/EstilosBotones.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
