@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\seren\Desktop\JuegoAhorcadoUO\Code\JuegoAhorcadoSolucion\ClienteAhorcado\obj\Debug\
+C:\Users\Kaleb\Source\Repos\JuegoAhorcadoSolucion\ClienteAhorcado\obj\Debug\
 ClienteAhorcado
 none
 false
 DEBUG;TRACE
-C:\Users\seren\Desktop\JuegoAhorcadoUO\Code\JuegoAhorcadoSolucion\ClienteAhorcado\App.xaml
-1219584333
+C:\Users\Kaleb\Source\Repos\JuegoAhorcadoSolucion\ClienteAhorcado\App.xaml
+6-855473524
 
-71472606777
+10896671678
 142063754234
-MainWindow.xaml;
+MainWindow.xaml;Recursos\Estilos\Animaciones.xaml;Recursos\Estilos\ElementosUI.xaml;Recursos\Estilos\EstilosBotones.xaml;Recursos\Estilos\EstilosTextBox.xaml;Vistas\IniciarSesion.xaml;
 
-False
+True
 
