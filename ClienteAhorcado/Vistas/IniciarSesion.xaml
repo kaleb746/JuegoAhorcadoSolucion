@@ -21,6 +21,10 @@
                 Style="{DynamicResource EstiloTextBox}" 
                 Tag="Correo"
                 Margin="0 0 0 0" />
+        <TextBox x:Name="Usuariio"
+        Style="{DynamicResource EstiloTextBox}" 
+        Tag="Usuario"
+        Margin="0 0 0 0" />
     </StackPanel>
    
 </Window>

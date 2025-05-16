@@ -5,7 +5,7 @@ using System.Windows.Controls;
 
 namespace ClienteAhorcado.Utilidades
 {
-    public static class ValidacionesEntrada
+    public static class ValidacionesEntrada 
     {
         public static void ValidarEntrada(TextBox textBox, string patron, int longitudMaxima)
         {
