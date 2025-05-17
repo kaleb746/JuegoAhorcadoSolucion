@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
 using ServidorAhorcadoService.Model;
-using ServidorAhorcadoService;
 using ServidorAhorcadoService.DTO;
 
 
@@ -20,14 +19,14 @@ namespace ServidorAhorcadoService
         // ---------------------------
         // AUTENTICACIÓN
         // ---------------------------
-        public UsuarioDTO IniciarSesion(string correo, string password)
+        public ServidorAhorcadoService.DTO.UsuarioDTO IniciarSesion(string correo, string password)
         {
             using (var db = new AhorcadoContext())
             {
                 var usuario = db.Usuarios.FirstOrDefault(u => u.Correo == correo && u.Password == password);
                 if (usuario != null)
                 {
-                    return new UsuarioDTO
+                    return new ServidorAhorcadoService.DTO.UsuarioDTO
                     {
                         IDUsuario = usuario.IDUsuario,
                         NombreCompleto = usuario.NombreCompleto,
