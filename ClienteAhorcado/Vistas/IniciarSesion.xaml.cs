@@ -23,5 +23,11 @@ namespace ClienteAhorcado.Vistas
         {
             InitializeComponent();
         }
+
+        private void Click_IniciarSesion(object sender, RoutedEventArgs e)
+        {
+            // Lógica para manejar el evento de clic en el botón "IniciarSesion"
+            MessageBox.Show("Botón Iniciar Sesión presionado.");
+        }
     }
 }

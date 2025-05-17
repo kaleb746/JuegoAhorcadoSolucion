@@ -12,7 +12,7 @@ namespace ServidorAhorcadoService
     {
         // Autenticación
         [OperationContract]
-        UsuarioDTO IniciarSesion(string correo, string password);
+        ServidorAhorcadoService.DTO.UsuarioDTO IniciarSesion(string correo, string password);
 
         [OperationContract]
         bool RegistrarUsuario(UsuarioDTO nuevoUsuario);

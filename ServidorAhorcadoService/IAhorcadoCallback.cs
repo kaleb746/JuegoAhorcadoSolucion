@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ServiceModel;
-using ServidorAhorcadoService;
+using ServidorAhorcadoService.DTO;
 
 namespace ServidorAhorcadoService { 
 

@@ -9,6 +9,7 @@ using PartidaEstadoDTO = ServidorAhorcadoService.DTO.PartidaEstadoDTO;
 
 
 
+
 namespace ClienteAhorcadoApp
 {
     public partial class MainWindow : Window, IAhorcadoCallback
@@ -19,10 +20,18 @@ namespace ClienteAhorcadoApp
 
         public MainWindow()
         {
-            InitializeComponent();
-            var contexto = new InstanceContext(this);
-            var factory = new DuplexChannelFactory<IAhorcadoService>(contexto, "AhorcadoEndpoint");
-            proxy = factory.CreateChannel();
+            try
+            {
+                InitializeComponent();
+                var contexto = new InstanceContext(this);
+                var factory = new DuplexChannelFactory<IAhorcadoService>(contexto, "AhorcadoEndpoint");
+                proxy = factory.CreateChannel();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al conectar con el servicio: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
@@ -149,7 +158,7 @@ namespace ClienteAhorcadoApp
             });
         }
 
-        public void ActualizarEstadoPartida(AhorcadoServidor.PartidaEstadoDTO estadoActual)
+        public void ActualizarEstadoPartida(ServidorAhorcadoService.PartidaEstadoDTO estadoActual)
         {
             throw new NotImplementedException();
         }
