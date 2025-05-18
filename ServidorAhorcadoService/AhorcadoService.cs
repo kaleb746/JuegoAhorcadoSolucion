@@ -31,8 +31,6 @@ namespace ServidorAhorcadoService
                         IDUsuario = usuario.IDUsuario,
                         NombreCompleto = usuario.NombreCompleto,
                         Correo = usuario.Correo,
-                        Idioma = db.Idiomas.Where(i => i.IDIdioma == usuario.IdiomaPreferido)
-                                           .Select(i => i.Codigo).FirstOrDefault(),
                         PuntajeGlobal = usuario.PuntajeGlobal
                     };
                 }
@@ -47,9 +45,6 @@ namespace ServidorAhorcadoService
                 if (db.Usuarios.Any(u => u.Correo == nuevoUsuario.Correo))
                     return false;
 
-                int idiomaId = db.Idiomas.Where(i => i.Codigo == nuevoUsuario.Idioma)
-                                         .Select(i => i.IDIdioma)
-                                         .FirstOrDefault();
 
                 var nuevo = new Usuario
                 {
@@ -58,7 +53,6 @@ namespace ServidorAhorcadoService
                     Password = nuevoUsuario.Password,
                     Telefono = nuevoUsuario.Telefono,
                     FechaNacimiento = nuevoUsuario.FechaNacimiento,
-                    IdiomaPreferido = idiomaId,
                     PuntajeGlobal = 0
                 };
 
@@ -98,8 +92,6 @@ namespace ServidorAhorcadoService
                         Correo = usuario.Correo,
                         Telefono = usuario.Telefono,
                         FechaNacimiento = usuario.FechaNacimiento,
-                        Idioma = db.Idiomas.Where(i => i.IDIdioma == usuario.IdiomaPreferido)
-                                           .Select(i => i.Codigo).FirstOrDefault(),
                         PuntajeGlobal = usuario.PuntajeGlobal
                     };
                 }

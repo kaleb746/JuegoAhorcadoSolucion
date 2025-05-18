@@ -76,7 +76,6 @@ namespace ServidorAhorcadoService
         public string Telefono { get; set; }
         public string Correo { get; set; }
         public string Password { get; set; }
-        public string Idioma { get; set; }
         public int PuntajeGlobal { get; set; }
     }
 

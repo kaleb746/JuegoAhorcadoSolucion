@@ -12,7 +12,6 @@ namespace ServidorAhorcadoService.Model
         public string Password { get; set; }
         public string Telefono { get; set; }
         public DateTime FechaNacimiento { get; set; }
-        public int IdiomaPreferido { get; set; }
         public int PuntajeGlobal { get; set; }
     }
 }
