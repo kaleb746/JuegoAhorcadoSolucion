@@ -13,3 +13,5 @@ namespace ServidorAhorcadoService.DTO
         public string Categoria { get; set; }
     }
 }
+
+// funciona o me mato?
