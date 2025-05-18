@@ -13,7 +13,6 @@ namespace ServidorAhorcadoService.DTO
         public string Correo { get; set; }
         public string Telefono { get; set; }
         public DateTime FechaNacimiento { get; set; }
-        public string Idioma { get; set; }
         public int PuntajeGlobal { get; set; }
     }
 }

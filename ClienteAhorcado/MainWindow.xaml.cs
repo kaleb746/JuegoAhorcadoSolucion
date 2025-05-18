@@ -14,6 +14,7 @@ namespace ClienteAhorcadoApp
 {
     public partial class MainWindow : Window, IAhorcadoCallback
     {
+
         IAhorcadoService proxy;
         ServidorAhorcadoService.DTO.UsuarioDTO usuarioActual;
         int idPartidaActual;
