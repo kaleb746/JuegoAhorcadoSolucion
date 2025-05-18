@@ -19,6 +19,19 @@ namespace ServidorAhorcadoService.Model
         public DbSet<HistorialPuntaje> HistorialPuntaje { get; set; }
         public DbSet<DescripcionCategoria> DescripcionCategorias { get; set; }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Usuario>().HasKey(u => u.IDUsuario);
+            modelBuilder.Entity<Categoria>().HasKey(c => c.IDCategoria);
+            modelBuilder.Entity<Palabra>().HasKey(p => p.IDPalabra);
+            modelBuilder.Entity<DescripcionPalabra>().HasKey(dp => dp.IDIdioma);
+            modelBuilder.Entity<DescripcionCategoria>().HasKey(dc => dc.IDDescripcionCategoria);
+            modelBuilder.Entity<Partida>().HasKey(p => p.IDPartida);
+            modelBuilder.Entity<HistorialPuntaje>().HasKey(h => h.IDHistorial);
+            modelBuilder.Entity<Idioma>().HasKey(i => i.IDIdioma);
+
+            // Repite para las demás entidades...
+        }
     }
 }
 
