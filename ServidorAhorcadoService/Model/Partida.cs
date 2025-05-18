@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace ServidorAhorcadoService.Model
 {
     public class Partida
     {
+        [Key]
         public int IDPartida { get; set; }
         public int IDCreador { get; set; }
         public int? IDRetador { get; set; }

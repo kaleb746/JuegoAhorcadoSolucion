@@ -138,6 +138,10 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ServidorAhorcadoService\ServidorAhorcadoService.csproj">
+      <Project>{9cb630a0-0828-472e-9e89-2ec1eac39dd1}</Project>
+      <Name>ServidorAhorcadoService</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

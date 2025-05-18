@@ -1,9 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ServidorAhorcadoService.Model
 {
     public class Usuario
     {
+        [Key]
         public int IDUsuario { get; set; }
         public string NombreCompleto { get; set; }
         public string Correo { get; set; }
