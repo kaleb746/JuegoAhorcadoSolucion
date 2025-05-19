@@ -7,11 +7,18 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ServidorAhorcadoService.Model
 {
-    public class Categoria
-    {
-        [Key] 
-        public int IDCategoria { get; set; }
-        public string Nombre { get; set; }
-        public int IDIdioma { get; set; }
-    }
+    [Key]
+    public int IDCategoria { get; set; }
+
+    [Required]
+    public int CodigoIdioma { get; set; }
+
+    [Required]
+    public string Nombre { get; set; }
+
+    [ForeignKey("CodigoIdioma")]
+    public virtual Idioma Idioma { get; set; }
+
+    public virtual ICollection<Palabra> Palabras { get; set; }
+
 }
