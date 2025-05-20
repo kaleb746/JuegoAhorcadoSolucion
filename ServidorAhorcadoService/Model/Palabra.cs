@@ -11,27 +11,9 @@ namespace ServidorAhorcadoService.Model
     {
         [Key]
         public int IDPalabra { get; set; }
-
-        [Required]
-        public int IDCategoria { get; set; }
-
-        public string LetrasUsadas { get; set; }
-
-        [Required]
-        public string PalabraTexto { get; set; }
-
-        [Required]
-        [MaxLength(200)]
-        public string Definicion { get; set; }
-
-        [Required]
+        public string  TextoPalabra { get; set; }
         public string Dificultad { get; set; }
-
-        [ForeignKey("IDCategoria")]
-        public virtual Categoria Categoria { get; set; }
-
-        public virtual ICollection<Partida> Partidas { get; set; }
-
-
+        public int IDCategoria { get; set; }
+        public int IDIdioma { get; set; }
     }
 }

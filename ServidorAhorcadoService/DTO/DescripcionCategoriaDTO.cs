@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
 
-namespace ServidorAhorcadoService.Model
+namespace ServidorAhorcadoService.DTO
 {
-    public class Categoria
+    public class DescripcionCategoriaDTO
     {
-        [Key] 
         public int IDCategoria { get; set; }
-        public string Nombre { get; set; }
         public int IDIdioma { get; set; }
+        public string NombreCategoria { get; set; }
     }
 }
