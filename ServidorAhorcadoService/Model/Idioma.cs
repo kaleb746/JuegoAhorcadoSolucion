@@ -10,11 +10,8 @@ namespace ServidorAhorcadoService.Model
     public class Idioma
     {
         [Key]
-        public int CodigoIdioma { get; set; }
-
-        [Required]
+        public int IDIdioma { get; set; }
+        public string Codigo { get; set; }
         public string Nombre { get; set; }
-
-        public virtual ICollection<Categoria> Categorias { get; set; }
     }
 }
