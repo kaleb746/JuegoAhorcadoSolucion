@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ServidorAhorcadoService;
-
 
 namespace ServidorAhorcadoService.DTO
 {
@@ -16,4 +14,3 @@ namespace ServidorAhorcadoService.DTO
         public string TurnoActual { get; set; }
     }
 }
-

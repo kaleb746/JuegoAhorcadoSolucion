@@ -60,3 +60,4 @@ namespace ServidorAhorcadoService
         [OperationContract]
         void EnviarMensajeChat(int idPartida, string nombreJugador, string mensaje);
     }
+}

@@ -55,25 +55,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AhorcadoService.cs" />
-    <Compile Include="DTO\DescripcionCategoriaDTO.cs" />
-    <Compile Include="DTO\DescripcionPalabraDTO.cs" />
+    <Compile Include="DTO\CategoriaDTO.cs" />
+    <Compile Include="DTO\EstadoDTO.cs" />
     <Compile Include="DTO\HistorialPuntajeDTO.cs" />
+    <Compile Include="DTO\JugadorDTO.cs" />
     <Compile Include="DTO\PalabraDTO.cs" />
     <Compile Include="DTO\PartidaDTO.cs" />
     <Compile Include="DTO\PartidaEstadoDTO.cs" />
-    <Compile Include="DTO\UsuarioDTO.cs" />
     <Compile Include="IAhorcadoCallback.cs" />
     <Compile Include="IAhorcadoService.cs" />
     <Compile Include="IService1.cs" />
     <Compile Include="Model\AhorcadoContext.cs" />
     <Compile Include="Model\Categoria.cs" />
-    <Compile Include="Model\DescripcionCategoria.cs" />
-    <Compile Include="Model\DescripcionPalabra.cs" />
-    <Compile Include="Model\HistorialPuntaje.cs" />
+    <Compile Include="Model\Estado.cs" />
     <Compile Include="Model\Idioma.cs" />
+    <Compile Include="Model\Jugador.cs" />
     <Compile Include="Model\Palabra.cs" />
     <Compile Include="Model\Partida.cs" />
-    <Compile Include="Model\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service1.cs" />
   </ItemGroup>
