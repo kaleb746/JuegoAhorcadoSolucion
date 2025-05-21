@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using System.ServiceModel;
 using ServidorAhorcadoService.DTO;
 
-namespace ServidorAhorcadoService { 
+namespace ServidorAhorcadoService
+{
 
     [ServiceContract]
     public interface IAhorcadoCallback

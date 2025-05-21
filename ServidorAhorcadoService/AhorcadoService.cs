@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
-using ServidorAhorcadoServiceLibrary.DTO;
-using ServidorAhorcadoServiceLibrary.Model;
+using ServidorAhorcadoService.DTO;
+using ServidorAhorcadoService.Model;
+using ServidorAhorcadoService;
+using ServidorAhorcadoService.DTO;
+
 
 namespace ServidorAhorcadoServiceLibrary
 {
@@ -109,10 +112,10 @@ namespace ServidorAhorcadoServiceLibrary
                     .Select(p => new PartidaDTO
                     {
                         IDPartida = p.IDPartida,
-                        Creador = p.Creador.Nombre,
-                        Retador = p.Retador != null ? p.Retador.Nombre : null,
+                        CreadorNombre = p.Creador.Nombre,
+                        RetadorNombre = p.Retador != null ? p.Retador.Nombre : null,
                         Estado = p.Estado.Nombre,
-                        FechaCreacion = p.Fecha,
+                        Fecha = p.Fecha,
                         PalabraTexto = p.Palabra.PalabraTexto
                     }).ToList();
             }
@@ -149,7 +152,7 @@ namespace ServidorAhorcadoServiceLibrary
                     Texto = palabra.PalabraTexto,
                     Definicion = palabra.Definicion,
                     Dificultad = palabra.Dificultad,
-                    CategoriaNombre = palabra.Categoria.Nombre
+                    IDCategoria = palabra.Categoria.Nombre
                 };
             }
         }
@@ -166,7 +169,7 @@ namespace ServidorAhorcadoServiceLibrary
                         Texto = p.PalabraTexto,
                         Definicion = p.Definicion,
                         Dificultad = p.Dificultad,
-                        CategoriaNombre = p.Categoria.Nombre
+                        IDCategoria = p.Categoria.Nombre
                     }).ToList();
             }
         }
@@ -201,10 +204,10 @@ namespace ServidorAhorcadoServiceLibrary
                     .Select(p => new PartidaDTO
                     {
                         IDPartida = p.IDPartida,
-                        Creador = p.Creador.Nombre,
-                        Retador = p.Retador != null ? p.Retador.Nombre : null,
+                        CreadorNombre = p.Creador.Nombre,
+                        RetadorNombre = p.Retador != null ? p.Retador.Nombre : null,
                         Estado = p.Estado.Nombre,
-                        FechaCreacion = p.Fecha,
+                        Fecha = p.Fecha,
                         PalabraTexto = p.Palabra.PalabraTexto
                     }).ToList();
             }
@@ -305,7 +308,7 @@ namespace ServidorAhorcadoServiceLibrary
             }
         }
 
-       //testing
+        //testing
 
         // --- CHAT ---
 

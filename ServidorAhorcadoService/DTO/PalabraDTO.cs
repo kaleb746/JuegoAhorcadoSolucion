@@ -15,5 +15,3 @@ namespace ServidorAhorcadoService.DTO
         public string IDCategoria { get; set; }
     }
 }
-
-// funciona o me mato?

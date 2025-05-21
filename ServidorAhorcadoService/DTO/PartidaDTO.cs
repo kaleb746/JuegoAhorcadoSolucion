@@ -24,7 +24,6 @@ namespace ServidorAhorcadoService.DTO
         public string CreadorNombre { get; set; }
         public string RetadorNombre { get; set; }
     }
-    
-}
 
+}
 

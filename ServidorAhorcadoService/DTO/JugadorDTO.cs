@@ -17,3 +17,4 @@ namespace ServidorAhorcadoService.DTO
         public int PuntajeGlobal { get; set; }
     }
 }
+

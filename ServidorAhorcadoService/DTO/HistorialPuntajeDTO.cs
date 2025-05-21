@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace ServidorAhorcadoService.DTO
 {
     public class HistorialPuntajeDTO
@@ -16,4 +15,3 @@ namespace ServidorAhorcadoService.DTO
         public string Rival { get; set; }
     }
 }
-
