@@ -8,7 +8,7 @@ using ServidorAhorcadoService;
 using ServidorAhorcadoService.DTO;
 
 
-namespace ServidorAhorcadoServiceLibrary
+namespace ServidorAhorcadoService
 {
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     public class AhorcadoService : IAhorcadoService
@@ -115,7 +115,7 @@ namespace ServidorAhorcadoServiceLibrary
                         CreadorNombre = p.Creador.Nombre,
                         RetadorNombre = p.Retador != null ? p.Retador.Nombre : null,
                         Estado = p.Estado.Nombre,
-                        Fecha = p.Fecha,
+                        Fecha = p.Fecha.ToString("yyyy-MM-dd HH:mm:ss"),
                         PalabraTexto = p.Palabra.PalabraTexto
                     }).ToList();
             }
@@ -201,13 +201,14 @@ namespace ServidorAhorcadoServiceLibrary
             {
                 return db.Partidas
                     .Where(p => p.IDEstado == 1)
+                    .AsEnumerable() // Cambia a LINQ-to-Objects
                     .Select(p => new PartidaDTO
                     {
                         IDPartida = p.IDPartida,
                         CreadorNombre = p.Creador.Nombre,
                         RetadorNombre = p.Retador != null ? p.Retador.Nombre : null,
                         Estado = p.Estado.Nombre,
-                        Fecha = p.Fecha,
+                        Fecha = p.Fecha.ToString("yyyy-MM-dd HH:mm:ss"),
                         PalabraTexto = p.Palabra.PalabraTexto
                     }).ToList();
             }

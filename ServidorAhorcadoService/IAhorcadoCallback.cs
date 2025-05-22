@@ -23,7 +23,7 @@ namespace ServidorAhorcadoService
 
         // NUEVOS EVENTOS OPCIONALES
 
-        [OperationContract(IsOneWay = true)]
+        /*[OperationContract(IsOneWay = true)]
         void JugadorSeUnio(string nombreJugador);
 
         [OperationContract(IsOneWay = true)]
@@ -34,6 +34,7 @@ namespace ServidorAhorcadoService
 
         [OperationContract(IsOneWay = true)]
         void ActualizarCantidadJugadores(int cantidadConectados);
+        */
     }
 }
 

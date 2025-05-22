@@ -39,6 +39,8 @@ namespace ServidorAhorcadoService.Model
         [StringLength(200)]
         public string LetrasUsadas { get; set; }
 
+        public int IntentosRestantes { get; set; }
+
         public virtual Jugador Creador { get; set; }
         public virtual Jugador Retador { get; set; }
         public virtual Jugador GanadorJugador { get; set; }

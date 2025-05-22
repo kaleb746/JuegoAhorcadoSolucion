@@ -21,6 +21,8 @@ namespace ServidorAhorcadoService.DTO
         public int? IDCancelador { get; set; }
         public string LetrasUsadas { get; set; }
 
+        public int IntentosRestantes { get; set; }
+
         public string CreadorNombre { get; set; }
         public string RetadorNombre { get; set; }
     }

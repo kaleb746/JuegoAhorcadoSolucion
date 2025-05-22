@@ -16,7 +16,7 @@ namespace ClienteAhorcadoApp
     {
 
         IAhorcadoService proxy;
-        ServidorAhorcadoService.DTO.UsuarioDTO usuarioActual;
+        JugadorDTO usuarioActual;
         int idPartidaActual;
 
         public MainWindow()
@@ -43,7 +43,7 @@ namespace ClienteAhorcadoApp
             usuarioActual = proxy.IniciarSesion(correo, pass);
             if (usuarioActual != null)
             {
-                MessageBox.Show($"Bienvenido, {usuarioActual.NombreCompleto}");
+                MessageBox.Show($"Bienvenido, {usuarioActual.Nombre}");
                 MostrarMenuPrincipal();
             }
             else
@@ -65,14 +65,14 @@ namespace ClienteAhorcadoApp
             lstPartidas.Items.Clear();
             foreach (var partida in partidas)
             {
-                lstPartidas.Items.Add($"ID:{partida.IDPartida} | Creador: {partida.Creador} | Estado: {partida.Estado}");
+                lstPartidas.Items.Add($"ID:{partida.IDPartida} | Creador: {partida.CreadorNombre} | Estado: {partida.Estado}");
             }
         }
 
         private void btnCreateGame_Click(object sender, RoutedEventArgs e)
         {
             int idPalabra = ObtenerPalabraSeleccionada();
-            bool ok = proxy.CrearPartida(usuarioActual.IDUsuario, idPalabra);
+            bool ok = proxy.CrearPartida(usuarioActual.IDJugador, idPalabra);
             if (ok)
                 MessageBox.Show("Partida creada, esperando retador...");
             else
@@ -89,7 +89,7 @@ namespace ClienteAhorcadoApp
             var partidaSeleccionada = lstPartidas.SelectedItem.ToString();
             int idPartida = ExtraerIDPartida(partidaSeleccionada);
 
-            bool ok = proxy.UnirseAPartida(idPartida, usuarioActual.IDUsuario);
+            bool ok = proxy.UnirseAPartida(idPartida, usuarioActual.IDJugador);
             if (ok)
             {
                 idPartidaActual = idPartida;
@@ -122,7 +122,7 @@ namespace ClienteAhorcadoApp
                 return;
             }
             char letra = txtLetra.Text.ToLower()[0];
-            bool ok = proxy.EnviarLetra(idPartidaActual, usuarioActual.IDUsuario, letra);
+            bool ok = proxy.EnviarLetra(idPartidaActual, usuarioActual.IDJugador, letra);
             if (ok)
             {
                 txtLetra.Text = "";
@@ -159,9 +159,24 @@ namespace ClienteAhorcadoApp
             });
         }
 
-        public void ActualizarEstadoPartida(ServidorAhorcadoService.PartidaEstadoDTO estadoActual)
+        /*public void JugadorSeUnio(string nombreJugador)
         {
             throw new NotImplementedException();
         }
+
+        public void JugadorAbandono(string nombreJugador)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CambiarTurno(string nombreJugadorActual)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ActualizarCantidadJugadores(int cantidadConectados)
+        {
+            throw new NotImplementedException();
+        }*/
     }
 }
